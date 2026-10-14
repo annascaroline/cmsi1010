@@ -1,0 +1,3 @@
+# Lab 07: Securing the Bag
+
+In this lab, we’ll come up with ways to compute the amount of money we’ll have at the end of an investment cycle, and determine how many months it will take to reach a desired goal. We’ll look at the effects of making deposits along the way, and what happens if taxes are taken out every year versus only at the end. We’ll also see whether the number of times interest is compounded per year makes much of a difference or not.
