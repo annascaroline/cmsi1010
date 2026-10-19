@@ -19,6 +19,7 @@
 # comments, prior to submission. You can, and should, add your own
 # comments, but please remove all the comments that are here now.
 # ----------------------------------------------------------------------
+import random
 
 
 def third_element(t):
@@ -44,8 +45,7 @@ def reverse_pair(t):
         raise TypeError
     elif len(t) != 2:
         raise ValueError
-    else:
-        return t[::-1]
+    return t[::-1]
 
 
 def middle_element_of_list(a):
@@ -56,8 +56,12 @@ def middle_element_of_list(a):
     elements, raise an IndexError. If a is not a list, raise a
     TypeError.
     """
-    # replace the pass statement with your code
-    pass
+    if not isinstance(a, list):
+        raise TypeError
+    elif len(a) % 2 != 0:
+        return a[len(a)//2]
+    else:
+        return a[(len(a)//2)-1]
 
 
 def unique_elements(a):
@@ -65,8 +69,11 @@ def unique_elements(a):
     Return a set of unique elements from the input list a.
     If a is not a list, raise a TypeError.
     """
-    # replace the pass statement with your code
-    pass
+    a == input()
+    if isinstance(a, list):
+        return set(random.sample(a, len(a)))
+    else:
+        raise TypeError
 
 
 def contains_duplicates(a):
@@ -74,8 +81,13 @@ def contains_duplicates(a):
     Return True if the input list a contains any duplicate elements,
     and False otherwise. If a is not a list, raise a TypeError.
     """
-    # replace the pass statement with your code
-    pass
+    a == input()
+    if len(a) != len(set(a)):
+        return True
+    elif len(a) == len(set(a)):
+        return False
+    elif isinstance(a, list):
+        raise TypeError
 
 
 def is_superset(a, b):

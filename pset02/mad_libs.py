@@ -41,3 +41,33 @@
 #
 #   2. The possible "yes" answers should be stored in a set.
 # ----------------------------------------------------------------------
+import random
+
+templates = [
+    {
+        "text": "A :adjective ghost is behind you! ",
+        "author": "annascaroline"
+    },
+    {
+        "text": "Some :adjective :creature with a :weapon is eating :dessert ",
+        "author": "annascaroline"
+    },
+    {
+        "text": "Look! There is a :adjective :verb a :noun in :place",
+        "author": "annascaroline"
+    },
+    {
+        "text": "A :adjective witch did a :verb with a :object" "",
+        "author": "annascaroline"
+    },
+    {
+        "text": "You are alone in a :place beware of :adjective :creature",
+        "author": "annascaroline"
+    },
+]
+
+yes_answers = {"yes", "sí", "oui", "yup", "bet", "yeah"}
+no_answers = {"no", "nah", "nope"}
+
+current_template = random.choice(templates)
+print(current_template)
