@@ -30,3 +30,21 @@ def sum_of_digits(n):
 
 def is_palindrome(s):
     return len(s) <= 1 or (s == s and is_palindrome(s[::-1]))
+
+# USING FOR LOOP - iterative solution
+"""
+def print_count_down(n):
+    for count in range(n, 0, -1):
+        print(count)
+    print("BOOM")
+"""
+# USING RECURSION
+def print_count_down(n):
+    if n <= 0:
+        print("BOOM")
+    else:
+        print(n)
+        print_count_down(n-1)
+
+print_count_down(-2)
+
